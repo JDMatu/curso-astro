@@ -1,0 +1,9 @@
+---
+import BaseLayouts from "../layouts/BaseLayouts.astro";
+const {url, title} = Astro.props; console.log(Astro.props);
+const pageTitle = "Blogs";
+
+---
+
+  <li> <a href={url}>{title}</a> </li>
+

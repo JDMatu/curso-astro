@@ -1,0 +1,28 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+const {pageTitle} = Astro.props;
+const skillColor = "navy";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{pageTitle}</title>
+    <link rel="stylesheet" href="/src/css/global.css">
+</head>
+<body>
+    <Header />
+    <slot />
+	<Footer />
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+          document.querySelector('.nav-links').classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>
